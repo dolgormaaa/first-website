@@ -8,15 +8,15 @@
 </head>
 <body>
     <form method="post">
-        {%for ajiltan in ajiltnuud%}
-        <input type="text" name="ajiltanner" value="{{ajiltan.ajiltanner}}">
-        {%endfor%}
+        {%for sa in ajiltnuud%}
+        <input type="text" name="ajiltanner" value="{{sa.ajiltanner}}">
         <select name="sname">
             {%for s in sname%}
             <option value="{{s.sid}}">{{s.sname}}</option>
             {%endfor%}
         </select>
         <input type="submit" value="Edit" class="btn btn-primary">
+        {%endfor%}
     </form>
 </body>
 </html>
