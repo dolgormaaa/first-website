@@ -94,7 +94,7 @@ def ajustgah(id):
     cur.execute(f'DELETE FROM ajiltan WHERE ajiltanid={id}')
     con.commit()
     return redirect(url_for('ajiltan'))
-@web.route('/edit/<int:id>',methods=['GET','POST'])
+@web.route('/ajiltanEdit/<int:id>',methods=['GET','POST'])
 def ajiltanEdit(id):
     if request.method=='GET':
         con=sql.connect('Employee.db')
